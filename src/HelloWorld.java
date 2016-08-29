@@ -210,12 +210,7 @@ public class HelloWorld{
             		String matchTimer = evento.select("td").get(0).select("a").text();
             		String matchResult = evento.select("td").get(1).select("a").text();
             		String matchTeams = evento.select("td").get(2).select("a").select("span").text();
-            		//matchTeams = new String(matchTeams.getBytes("utf-8"));
-            		//matchTeams = matchTeams.replaceAll("\\?","_");
-            		/*String quotedText = Pattern.quote( "   ?   ");
-            		Pattern p = Pattern.compile( quotedText );
-            		Matcher m = p.matcher( matchTeams );
-            		matchTeams = m.replaceAll("_");*/
+            		
             		String localCuoteStr = evento.select("td").get(4).select("div > div").text();
             		String drawCouteStr = evento.select("td").get(5).select("div > div").text();
             		String visitCuoteStr = evento.select("td").get(6).select("div > div").text();
