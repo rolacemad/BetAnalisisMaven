@@ -1,1 +1,1 @@
-worker: sh target/bin/worker
+worker: sh target/BetAnalisisMaven-0.0.1-SNAPSHOT.jar
