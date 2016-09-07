@@ -1,1 +1,1 @@
-worker: sh target/classes/worker
+web: java -jar target/BetAnalisisMaven-0.0.1-SNAPSHOT.jar

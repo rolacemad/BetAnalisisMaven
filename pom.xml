@@ -15,7 +15,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
          <configuration>
-            <assembleDirectory>target</assembleDirectory>
+            <assembleDirectory>target/bin</assembleDirectory>
             <programs>
                 <program>
                     <mainClass>HelloWorld</mainClass>
