@@ -1,1 +1,1 @@
-web:    java src.HelloWorld
+web:    java -cp "target/dependency/*":target/classes HelloWorld
