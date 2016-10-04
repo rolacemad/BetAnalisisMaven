@@ -1,1 +1,1 @@
-web:    java -cp "target/dependency/*":target/classes HelloWorld
+web:    java $JAVA_OPTS -Dserver.port=$PORT -cp "target/dependency/*":target/classes HelloWorld

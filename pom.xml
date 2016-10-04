@@ -14,20 +14,10 @@
       
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
-         <configuration>
-            <assembleDirectory>target/bin</assembleDirectory>
-            <programs>
-                <program>
-                    <mainClass>HelloWorld</mainClass>
-                    <name>worker</name>
-                </program>
-            </programs>
-          </configuration>
-          <executions>
-              <execution>
-                  <phase>package</phase>
-              </execution>
-          </executions>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
         
       </plugin>
       
@@ -35,6 +25,19 @@
     
   </build>
    <dependencies>
-     
+      <dependency>
+         <groupId>org.jsoup</groupId>
+         <artifactId>jsoup</artifactId>
+         <version>1.9.2</version>
+         <scope>provided</scope>
+       
+      </dependency>
+     <dependency>
+         <groupId>java.sql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.39</version>
+         <scope>system</scope>
+        <systemPath>${basedir}\lib\mysql-connector-java-5.1.39-bin.jar</systemPath>
+      </dependency>
       </dependencies>
 </project>
