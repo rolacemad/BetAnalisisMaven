@@ -111,15 +111,21 @@ public class HelloWorld{
 			public void run() {
 				 System.out.println("Lanzamoooooooos tarea!!!!");
 				    try {
-				    	 URI dbUri = new URI(System.getenv("DATABASE_URL"));
+				    	
+				    	
+				    	 String dbUrl = System.getenv("JDBC_DATABASE_URL");
+				    	
+				    	    
+				    	    
+				    	/* URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
 				         String username = dbUri.getUserInfo().split(":")[0];
 				         String password = dbUri.getUserInfo().split(":")[1];
 				         String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 				         System.out.println("user: " + username);
-				         System.out.println("password: " + password);
+				         System.out.println("password: " + password);*/
 				         System.out.println("dbUrl" + dbUrl);
-			        	  try (Connection connection = DriverManager.getConnection(dbUrl, username, password)) {
+			        	  try (Connection connection = DriverManager.getConnection(dbUrl)) {
 			                  System.out.println("Database connected!");
 			                  
 			                  Statement stmt = connection.createStatement();
