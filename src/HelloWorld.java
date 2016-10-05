@@ -115,7 +115,7 @@ public class HelloWorld{
 
 				         String username = dbUri.getUserInfo().split(":")[0];
 				         String password = dbUri.getUserInfo().split(":")[1];
-				         String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+				         String dbUrl = "jdbc:mysql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 			        	  try (Connection connection = DriverManager.getConnection(dbUrl, username, password)) {
 			                  System.out.println("Database connected!");
 			                  
