@@ -14,66 +14,27 @@
       
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
+         <configuration>
+            <assembleDirectory>target/bin</assembleDirectory>
+            <programs>
+                <program>
+                    <mainClass>HelloWorld</mainClass>
+                    <name>worker</name>
+                </program>
+            </programs>
+          </configuration>
+          <executions>
+              <execution>
+                  <phase>package</phase>
+              </execution>
+          </executions>
         
       </plugin>
       
     </plugins>
     
   </build>
-  
-  <repositories>
-    <repository>
-        <id>in-project</id>
-        <name>In Project Repo</name>
-        <url>file:${basedir}/lib</url>
-    </repository>
-</repositories>
-<dependencies>
-
-    <dependency>
-        <groupId>commons</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>2.5</version>
-    </dependency>
-
-    <dependency>
-        <groupId>jsoup</groupId>
-        <artifactId>jsoup</artifactId>
-        <version>1.9.2</version>
-    </dependency>
-    
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>5.1.39</version>
-    </dependency>
-    
-    <dependency>
-        <groupId>mailapi</groupId>
-        <artifactId>mailapi</artifactId>
-        <version>1.0.0</version>
-    </dependency>
-<!-- 
    <dependencies>
-      <dependency>
-         <groupId>org.jsoup</groupId>
-         <artifactId>jsoup</artifactId>
-         <version>1.9.2</version>
-         <scope>provided</scope>
-       
-      </dependency>
-     <dependency>
-         <groupId>java.sql</groupId>
-         <artifactId>mysql-connector-java</artifactId>
-         <version>5.1.39</version>
-         <scope>system</scope>
-        <systemPath>file:${basedir}\lib\mysql-connector-java-5.1.39-bin.jar</systemPath>
-      </dependency>
+     
       </dependencies>
-       -->
-       </dependencies>
 </project>

@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -Dserver.port=$PORT -cp "target/dependency/*":target/classes HelloWorld
+worker: sh target/bin/worker
