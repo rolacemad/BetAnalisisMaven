@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -cp "target/dependency/*":target/classes HelloWorld --host=0.0.0.0 --port=$PORT
+worker: sh target/bin/worker
